@@ -73,7 +73,7 @@ class _SearchPageState extends State<SearchPage> {
                       ),
                     ),
 
-                    //search textformfield
+                    // Search TextFormField
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.only(left: 20.0, top: 40.0),
@@ -95,7 +95,14 @@ class _SearchPageState extends State<SearchPage> {
                             ),
                             contentPadding:
                                 const EdgeInsets.symmetric(vertical: 10.0),
-                            border: OutlineInputBorder(
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(60.0),
+                              borderSide: const BorderSide(
+                                color: Color(0xFFF7fAFB),
+                                width: 1.0,
+                              ),
+                            ),
+                            enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(60.0),
                               borderSide: const BorderSide(
                                 color: Color(0xFFF7fAFB),
