@@ -36,7 +36,7 @@ class WelcomePage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 45.0,
                         fontWeight: FontWeight.w800,
-                        color: Colors.white,
+                        color: Color(0xFFF7fAFB),
                       ),
                     ),
 
@@ -45,9 +45,12 @@ class WelcomePage extends StatelessWidget {
                       height: 42.0,
                       width: 42.0,
                       decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(60.0),
-                      ),
+                          color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                          borderRadius: BorderRadius.circular(60.0),
+                          border: Border.all(
+                            width: 1.0,
+                            color: const Color(0xFFF7fAFB),
+                          )),
                       //play icon
                       child: const Icon(
                         Icons.play_arrow_rounded,
@@ -64,7 +67,7 @@ class WelcomePage extends StatelessWidget {
                 'Music the way you love it.',
                 style: TextStyle(
                   fontSize: 17.0,
-                  color: Colors.white,
+                  color: Color(0xFFF7fAFB),
                 ),
               ),
 
@@ -83,9 +86,14 @@ class WelcomePage extends StatelessWidget {
                         // );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFE3E5E5).withOpacity(0.7),
+                        backgroundColor:
+                            const Color(0xFFE3E5E5).withOpacity(0.7),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(100.0),
+                        ),
+                        side: const BorderSide(
+                          width: 1.0,
+                          color: Colors.white,
                         ),
                       ),
                       child: Padding(
@@ -97,13 +105,18 @@ class WelcomePage extends StatelessWidget {
                               height: 28.0,
                               width: 28.0,
                               decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(60.0),
-                              ),
+                                  color:
+                                      const Color(0xFFE3E5E5).withOpacity(0.7),
+                                  borderRadius: BorderRadius.circular(60.0),
+                                  border: Border.all(
+                                    width: 1.0,
+                                    color: Colors.white,
+                                  )),
                               //play icon
                               child: const Icon(
                                 Icons.play_arrow_rounded,
                                 size: 24.0,
+                                color: Color(0xFFF7fAFB),
                               ),
                             ),
 
@@ -115,7 +128,7 @@ class WelcomePage extends StatelessWidget {
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 17.0,
-                                  color: Colors.black,
+                                  color: Color(0xFFF7fAFB),
                                 ),
                               ),
                             ),
