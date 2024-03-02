@@ -34,7 +34,7 @@ class _LandingPageState extends State<LandingPage> {
           ),
         ),
         child: BottomNavigationBar(
-          backgroundColor: const Color(0xFF89999D).withOpacity(0.9),
+          backgroundColor: const Color(0xFF89999D).withOpacity(0.8),
           currentIndex: _currentIndex,
           onTap: (index) {
             setState(() {
@@ -42,10 +42,10 @@ class _LandingPageState extends State<LandingPage> {
             });
           },
           // Color for selected item
-          selectedItemColor: const Color(0xFFb09689),
+          selectedItemColor: const Color(0xFFF7fAFB),
 
           // Color for unselected items
-          unselectedItemColor: Theme.of(context).colorScheme.inversePrimary,
+          unselectedItemColor: const Color(0xFFF7fAFB),
 
           // Hide selected labels
           showSelectedLabels: true,
@@ -59,20 +59,18 @@ class _LandingPageState extends State<LandingPage> {
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
                   color: _currentIndex == 0
-                      ? Theme.of(context).colorScheme.inversePrimary
+                      ? const Color(0xFFE3E5E5).withOpacity(0.7)
 
                       // White background for the selected item
                       : null,
                   borderRadius: BorderRadius.circular(
                     10.0,
                   ),
-                  boxShadow: _currentIndex == 0
-                      ? [
-                          BoxShadow(
-                            color: Colors.white.withOpacity(0.2),
-                            blurRadius: 8,
-                          ),
-                        ]
+                  border: _currentIndex == 0
+                      ? Border.all(
+                          width: 1.0,
+                          color: const Color(0xFFF7fAFB),
+                        )
                       : null,
                 ),
                 child: const Icon(Icons.home_rounded),
@@ -84,20 +82,18 @@ class _LandingPageState extends State<LandingPage> {
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
                   color: _currentIndex == 1
-                      ? Theme.of(context).colorScheme.inversePrimary
+                      ? const Color(0xFFE3E5E5).withOpacity(0.7)
 
                       // White background for the selected item
                       : null,
                   borderRadius: BorderRadius.circular(
                     10.0,
                   ),
-                  boxShadow: _currentIndex == 1
-                      ? [
-                          BoxShadow(
-                            color: Colors.white.withOpacity(0.2),
-                            blurRadius: 8,
-                          ),
-                        ]
+                  border: _currentIndex == 1
+                      ? Border.all(
+                          width: 1.0,
+                          color: const Color(0xFFF7fAFB),
+                        )
                       : null,
                 ),
                 child: const Icon(Icons.history_edu_rounded),
@@ -109,20 +105,18 @@ class _LandingPageState extends State<LandingPage> {
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
                   color: _currentIndex == 2
-                      ? Theme.of(context).colorScheme.inversePrimary
+                      ? const Color(0xFFE3E5E5).withOpacity(0.7)
 
                       // White background for the selected item
                       : null,
                   borderRadius: BorderRadius.circular(
                     10.0,
                   ),
-                  boxShadow: _currentIndex == 2
-                      ? [
-                          BoxShadow(
-                            color: Colors.white.withOpacity(0.2),
-                            blurRadius: 8,
-                          ),
-                        ]
+                  border: _currentIndex == 2
+                      ? Border.all(
+                          width: 1.0,
+                          color: const Color(0xFFF7fAFB),
+                        )
                       : null,
                 ),
                 child: const Icon(Icons.library_music_rounded),
@@ -134,20 +128,18 @@ class _LandingPageState extends State<LandingPage> {
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
                   color: _currentIndex == 3
-                      ? Theme.of(context).colorScheme.inversePrimary
+                      ? const Color(0xFFE3E5E5).withOpacity(0.7)
 
                       // White background for the selected item
                       : null,
                   borderRadius: BorderRadius.circular(
                     10.0,
                   ),
-                  boxShadow: _currentIndex == 3
-                      ? [
-                          BoxShadow(
-                            color: Colors.white.withOpacity(0.2),
-                            blurRadius: 8,
-                          ),
-                        ]
+                  border: _currentIndex == 3
+                      ? Border.all(
+                          width: 1.0,
+                          color: const Color(0xFFF7fAFB),
+                        )
                       : null,
                 ),
                 child: const Icon(Icons.settings),
