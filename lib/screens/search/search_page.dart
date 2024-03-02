@@ -170,6 +170,90 @@ class _SearchPageState extends State<SearchPage> {
                     ],
                   ),
                 ),
+
+                //recent searches
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                    borderRadius: BorderRadius.circular(20.0),
+                    border: Border.all(
+                      width: 1.0,
+                      color: const Color(0xFFF7fAFB),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        //image
+                        Container(
+                          height: 90.0,
+                          width: 90.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20.0),
+                            image: const DecorationImage(
+                              image: AssetImage("assets/images/sing1.jpg"),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+
+                        //song name and artiste name
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            //song name
+                            Text(
+                              "This is the way of life",
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+
+                            //name of artiste
+                            Text(
+                              "brilliant",
+                              style: TextStyle(
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        //favorite icon
+                        Column(
+                          children: [
+                            // favorite icon wrapped in a container
+                            Container(
+                              height: 28.0,
+                              width: 28.0,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                                borderRadius: BorderRadius.circular(60.0),
+                                border: Border.all(
+                                  width: 1.0,
+                                  color: const Color(0xFFF7fAFB),
+                                ),
+                              ),
+                              // favorite icon
+                              child: const Icon(
+                                Icons.favorite_outlined,
+                                size: 20.0,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
