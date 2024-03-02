@@ -96,7 +96,7 @@ class _LandingPageState extends State<LandingPage> {
                         )
                       : null,
                 ),
-                child: const Icon(Icons.history_edu_rounded),
+                child: const Icon(Icons.search_rounded),
               ),
               label: 'Search',
             ),
