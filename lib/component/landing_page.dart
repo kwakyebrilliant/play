@@ -26,14 +26,15 @@ class _LandingPageState extends State<LandingPage> {
     return Scaffold(
       body: _pages[_currentIndex],
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           border: Border(
             top: BorderSide(
-              color: Theme.of(context).colorScheme.primary,
+              color: Color(0xFFF7fAFB),
             ),
           ),
         ),
         child: BottomNavigationBar(
+          backgroundColor: const Color(0xFF89999D).withOpacity(0.9),
           currentIndex: _currentIndex,
           onTap: (index) {
             setState(() {
@@ -41,16 +42,16 @@ class _LandingPageState extends State<LandingPage> {
             });
           },
           // Color for selected item
-          selectedItemColor: Theme.of(context).colorScheme.background,
+          selectedItemColor: const Color(0xFFb09689),
 
           // Color for unselected items
           unselectedItemColor: Theme.of(context).colorScheme.inversePrimary,
 
           // Hide selected labels
-          showSelectedLabels: false,
+          showSelectedLabels: true,
 
           // Hide unselected labels
-          showUnselectedLabels: false,
+          showUnselectedLabels: true,
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
