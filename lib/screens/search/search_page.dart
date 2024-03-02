@@ -147,9 +147,9 @@ class _SearchPageState extends State<SearchPage> {
                       _buildCategoryContainer(
                           'assets/images/play3.png', 'Genre 2'),
                       _buildCategoryContainer(
-                          'assets/images/play3.png', 'Genre 3'),
+                          'assets/images/play4.png', 'Genre 3'),
                       _buildCategoryContainer(
-                          'assets/images/sing2.jpg', 'Genre 4'),
+                          'assets/images/play5.png', 'Genre 4'),
                     ],
                   ),
                 ),
