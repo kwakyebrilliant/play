@@ -120,7 +120,7 @@ class _SearchPageState extends State<SearchPage> {
 
                 //Genre header text
                 const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 15.0),
+                  padding: EdgeInsets.symmetric(vertical: 20.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -135,7 +135,7 @@ class _SearchPageState extends State<SearchPage> {
                   ),
                 ),
 
-                // Categories using PageView
+                // Genres using PageView
                 SizedBox(
                   // Height of the PageView
                   height: 200,
@@ -143,13 +143,30 @@ class _SearchPageState extends State<SearchPage> {
                     controller: _pageController,
                     children: [
                       _buildCategoryContainer(
-                          'assets/images/sing1.jpg', 'Category 1'),
+                          'assets/images/sing1.jpg', 'Genre 1'),
                       _buildCategoryContainer(
-                          'assets/images/sing2.jpg', 'Category 2'),
+                          'assets/images/sing2.jpg', 'Genre 2'),
                       _buildCategoryContainer(
-                          'assets/images/play.png', 'Category 3'),
+                          'assets/images/play.png', 'Genre 3'),
                       _buildCategoryContainer(
-                          'assets/images/play2.png', 'Category 4'),
+                          'assets/images/play2.png', 'Genre 4'),
+                    ],
+                  ),
+                ),
+
+                //Recent search header text
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Recent',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Color(0xFFF7fAFB),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -165,25 +182,88 @@ class _SearchPageState extends State<SearchPage> {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 8.0),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
-        border: Border.all(
-          width: 1.0,
-          color: const Color(0xFFF7fAFB),
-        ),
-        image: DecorationImage(
-          image: AssetImage(imagePath),
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: Center(
-        child: Text(
-          category,
-          style: const TextStyle(
-            fontSize: 24.0,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+          borderRadius: BorderRadius.circular(20.0),
+          image: DecorationImage(
+            image: AssetImage(imagePath),
+            fit: BoxFit.cover,
           ),
-        ),
+          border: Border.all(
+            width: 1.0,
+            color: const Color(0xFFF7fAFB),
+          )),
+      child: Stack(
+        children: [
+          Positioned(
+            left: 10,
+            right: 10,
+            bottom: 10,
+            child: Container(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+              decoration: BoxDecoration(
+                  color: const Color(0xFFE3E5E5).withOpacity(0.2),
+                  borderRadius: BorderRadius.circular(20.0),
+                  border: Border.all(
+                    width: 1.0,
+                    color: const Color(0xFFF7fAFB),
+                  )),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  //Genre and the number of songs
+                  Column(
+                    children: [
+                      //genre
+                      Text(
+                        category,
+                        style: const TextStyle(
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+
+                      //number of songs
+                      const Text(
+                        "186 Songs",
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  //play logo here
+                  Column(
+                    children: [
+                      // Play icon wrapped in a container
+                      Container(
+                        height: 28.0,
+                        width: 28.0,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                          borderRadius: BorderRadius.circular(60.0),
+                          border: Border.all(
+                            width: 1.0,
+                            color: const Color(0xFFF7fAFB),
+                          ),
+                        ),
+                        // Play icon
+                        child: const Icon(
+                          Icons.play_arrow_outlined,
+                          size: 20.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
