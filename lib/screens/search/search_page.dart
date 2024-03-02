@@ -143,11 +143,11 @@ class _SearchPageState extends State<SearchPage> {
                     controller: _pageController,
                     children: [
                       _buildCategoryContainer(
-                          'assets/images/play.png', 'Genre 1'),
+                          'assets/images/play2.png', 'Genre 1'),
                       _buildCategoryContainer(
-                          'assets/images/play2.png', 'Genre 2'),
+                          'assets/images/play3.png', 'Genre 2'),
                       _buildCategoryContainer(
-                          'assets/images/sing1.jpg', 'Genre 3'),
+                          'assets/images/play3.png', 'Genre 3'),
                       _buildCategoryContainer(
                           'assets/images/sing2.jpg', 'Genre 4'),
                     ],
