@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class SearchPage extends StatefulWidget {
-  const SearchPage({super.key});
+  const SearchPage({Key? key}) : super(key: key);
 
   @override
   State<SearchPage> createState() => _SearchPageState();
 }
 
 class _SearchPageState extends State<SearchPage> {
+  final PageController _pageController = PageController(viewportFraction: 0.8);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,17 +32,17 @@ class _SearchPageState extends State<SearchPage> {
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Column(
               children: [
-                //logo and search input
+                // Logo and Search input
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    //play logo
+                    // Play Logo
                     Padding(
                       padding: const EdgeInsets.only(top: 40.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          //play text
+                          // Play text
                           const Text(
                             'PLAY',
                             style: TextStyle(
@@ -51,18 +52,19 @@ class _SearchPageState extends State<SearchPage> {
                             ),
                           ),
 
-                          // play icon wrapped in a container
+                          // Play icon wrapped in a container
                           Container(
                             height: 28.0,
                             width: 28.0,
                             decoration: BoxDecoration(
-                                color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                                borderRadius: BorderRadius.circular(60.0),
-                                border: Border.all(
-                                  width: 1.0,
-                                  color: const Color(0xFFF7fAFB),
-                                )),
-                            //play icon
+                              color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                              borderRadius: BorderRadius.circular(60.0),
+                              border: Border.all(
+                                width: 1.0,
+                                color: const Color(0xFFF7fAFB),
+                              ),
+                            ),
+                            // Play icon
                             child: const Icon(
                               Icons.play_arrow_rounded,
                               size: 20.0,
@@ -115,11 +117,80 @@ class _SearchPageState extends State<SearchPage> {
                     ),
                   ],
                 ),
+
+                //Genre header text
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 15.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Genre',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Color(0xFFF7fAFB),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                // Categories using PageView
+                SizedBox(
+                  // Height of the PageView
+                  height: 200,
+                  child: PageView(
+                    controller: _pageController,
+                    children: [
+                      _buildCategoryContainer(
+                          'assets/images/sing1.jpg', 'Category 1'),
+                      _buildCategoryContainer(
+                          'assets/images/sing2.jpg', 'Category 2'),
+                      _buildCategoryContainer(
+                          'assets/images/play.png', 'Category 3'),
+                      _buildCategoryContainer(
+                          'assets/images/play2.png', 'Category 4'),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  Widget _buildCategoryContainer(String imagePath, String category) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 8.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20.0),
+        border: Border.all(
+          width: 1.0,
+          color: const Color(0xFFF7fAFB),
+        ),
+        image: DecorationImage(
+          image: AssetImage(imagePath),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: Center(
+        child: Text(
+          category,
+          style: const TextStyle(
+            fontSize: 24.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 }
