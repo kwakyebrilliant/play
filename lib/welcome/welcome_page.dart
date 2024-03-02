@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:play/component/landing_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -79,11 +80,11 @@ class WelcomePage extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 50.0),
                     child: ElevatedButton(
                       onPressed: () {
-                        // Navigator.of(context).push(
-                        //   MaterialPageRoute(
-                        //     builder: (context) => const LoginPage(),
-                        //   ),
-                        // );
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => const LandingPage(),
+                          ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor:

@@ -132,7 +132,7 @@ class _LandingPageState extends State<LandingPage> {
               icon: Container(
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
-                  color: _currentIndex == 2
+                  color: _currentIndex == 3
                       ? Theme.of(context).colorScheme.inversePrimary
 
                       // White background for the selected item
@@ -140,7 +140,7 @@ class _LandingPageState extends State<LandingPage> {
                   borderRadius: BorderRadius.circular(
                     10.0,
                   ),
-                  boxShadow: _currentIndex == 2
+                  boxShadow: _currentIndex == 3
                       ? [
                           BoxShadow(
                             color: Colors.white.withOpacity(0.2),
