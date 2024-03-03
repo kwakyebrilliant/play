@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class GenrePage extends StatefulWidget {
-  const GenrePage({super.key});
+  const GenrePage({super.key, required this.genreName});
+
+  final String genreName;
 
   @override
   State<GenrePage> createState() => _GenrePageState();
