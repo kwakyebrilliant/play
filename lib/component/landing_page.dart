@@ -64,7 +64,7 @@ class _LandingPageState extends State<LandingPage> {
                       // White background for the selected item
                       : null,
                   borderRadius: BorderRadius.circular(
-                    10.0,
+                    60.0,
                   ),
                   border: _currentIndex == 0
                       ? Border.all(
@@ -87,7 +87,7 @@ class _LandingPageState extends State<LandingPage> {
                       // White background for the selected item
                       : null,
                   borderRadius: BorderRadius.circular(
-                    10.0,
+                    60.0,
                   ),
                   border: _currentIndex == 1
                       ? Border.all(
@@ -110,7 +110,7 @@ class _LandingPageState extends State<LandingPage> {
                       // White background for the selected item
                       : null,
                   borderRadius: BorderRadius.circular(
-                    10.0,
+                    60.0,
                   ),
                   border: _currentIndex == 2
                       ? Border.all(
@@ -133,7 +133,7 @@ class _LandingPageState extends State<LandingPage> {
                       // White background for the selected item
                       : null,
                   borderRadius: BorderRadius.circular(
-                    10.0,
+                    60.0,
                   ),
                   border: _currentIndex == 3
                       ? Border.all(
