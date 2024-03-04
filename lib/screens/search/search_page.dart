@@ -130,6 +130,7 @@ class _SearchPageState extends State<SearchPage> {
                         style: TextStyle(
                           fontSize: 20.0,
                           color: Color(0xFFF7fAFB),
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ],
@@ -166,6 +167,7 @@ class _SearchPageState extends State<SearchPage> {
                         style: TextStyle(
                           fontSize: 20.0,
                           color: Color(0xFFF7fAFB),
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ],
