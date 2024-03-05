@@ -190,7 +190,6 @@ class _SearchPageState extends State<SearchPage> {
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           //image
                           Container(
@@ -206,30 +205,41 @@ class _SearchPageState extends State<SearchPage> {
                           ),
 
                           //song name and artiste name
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              //song name
-                              Text(
-                                "This is the way of life",
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                ),
-                              ),
+                          const Expanded(
+                            flex: 4,
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  //song name
+                                  Text(
+                                    "This is the way of life here ",
+                                    style: TextStyle(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
 
-                              //name of artiste
-                              Text(
-                                "brilliant",
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                ),
+                                  //name of artiste
+                                  Text(
+                                    "brilliant",
+                                    style: TextStyle(
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
+
+                          // Spacer to push the favorite icon to the end
+                          const Spacer(),
 
                           //favorite icon
                           Column(
@@ -278,7 +288,6 @@ class _SearchPageState extends State<SearchPage> {
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           //image
                           Container(
@@ -294,30 +303,41 @@ class _SearchPageState extends State<SearchPage> {
                           ),
 
                           //song name and artiste name
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              //song name
-                              Text(
-                                "This is the way of life",
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                ),
-                              ),
+                          const Expanded(
+                            flex: 4,
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  //song name
+                                  Text(
+                                    "This is the way",
+                                    style: TextStyle(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
 
-                              //name of artiste
-                              Text(
-                                "brilliant",
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                ),
+                                  //name of artiste
+                                  Text(
+                                    "brilliant",
+                                    style: TextStyle(
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
+
+                          // Spacer to push the favorite icon to the end
+                          const Spacer(),
 
                           //favorite icon
                           Column(
@@ -366,7 +386,6 @@ class _SearchPageState extends State<SearchPage> {
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           //image
                           Container(
@@ -382,30 +401,41 @@ class _SearchPageState extends State<SearchPage> {
                           ),
 
                           //song name and artiste name
-                          const Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              //song name
-                              Text(
-                                "This is the way of life",
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                ),
-                              ),
+                          const Expanded(
+                            flex: 4,
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  //song name
+                                  Text(
+                                    "This is the way of life here ",
+                                    style: TextStyle(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
 
-                              //name of artiste
-                              Text(
-                                "brilliant",
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white,
-                                ),
+                                  //name of artiste
+                                  Text(
+                                    "brilliant",
+                                    style: TextStyle(
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
+                            ),
                           ),
+
+                          // Spacer to push the favorite icon to the end
+                          const Spacer(),
 
                           //favorite icon
                           Column(
