@@ -433,7 +433,6 @@ class _GenrePageState extends State<GenrePage> {
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           //image
                           Container(
@@ -449,14 +448,15 @@ class _GenrePageState extends State<GenrePage> {
                           ),
 
                           //song name and artiste name
-                          const Flexible(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                //song name
-                                Padding(
-                                  padding: EdgeInsets.only(left: 8.0),
-                                  child: Text(
+                          const Expanded(
+                            flex: 4,
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  //song name
+                                  Text(
                                     "This is the way of life here ",
                                     style: TextStyle(
                                       fontSize: 16.0,
@@ -465,12 +465,9 @@ class _GenrePageState extends State<GenrePage> {
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
-                                ),
 
-                                //name of artiste
-                                Padding(
-                                  padding: EdgeInsets.only(left: 8.0),
-                                  child: Text(
+                                  //name of artiste
+                                  Text(
                                     "brilliant",
                                     style: TextStyle(
                                       fontSize: 14.0,
@@ -479,10 +476,13 @@ class _GenrePageState extends State<GenrePage> {
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
+
+                          // Spacer to push the favorite icon to the end
+                          const Spacer(),
 
                           //favorite icon
                           Column(
@@ -531,7 +531,6 @@ class _GenrePageState extends State<GenrePage> {
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           //image
                           Container(
@@ -547,15 +546,16 @@ class _GenrePageState extends State<GenrePage> {
                           ),
 
                           //song name and artiste name
-                          const Flexible(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                //song name
-                                Padding(
-                                  padding: EdgeInsets.only(left: 8.0),
-                                  child: Text(
-                                    "This is the way of life",
+                          const Expanded(
+                            flex: 4,
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  //song name
+                                  Text(
+                                    "This is the way",
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
@@ -563,12 +563,9 @@ class _GenrePageState extends State<GenrePage> {
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
-                                ),
 
-                                //name of artiste
-                                Padding(
-                                  padding: EdgeInsets.only(left: 8.0),
-                                  child: Text(
+                                  //name of artiste
+                                  Text(
                                     "brilliant",
                                     style: TextStyle(
                                       fontSize: 14.0,
@@ -577,10 +574,13 @@ class _GenrePageState extends State<GenrePage> {
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
+
+                          // Spacer to push the favorite icon to the end
+                          const Spacer(),
 
                           //favorite icon
                           Column(
@@ -629,7 +629,6 @@ class _GenrePageState extends State<GenrePage> {
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           //image
                           Container(
@@ -645,14 +644,15 @@ class _GenrePageState extends State<GenrePage> {
                           ),
 
                           //song name and artiste name
-                          const Flexible(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                //song name
-                                Padding(
-                                  padding: EdgeInsets.only(left: 8.0),
-                                  child: Text(
+                          const Expanded(
+                            flex: 4,
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  //song name
+                                  Text(
                                     "This is the way of life here ",
                                     style: TextStyle(
                                       fontSize: 16.0,
@@ -661,12 +661,9 @@ class _GenrePageState extends State<GenrePage> {
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
-                                ),
 
-                                //name of artiste
-                                Padding(
-                                  padding: EdgeInsets.only(left: 8.0),
-                                  child: Text(
+                                  //name of artiste
+                                  Text(
                                     "brilliant",
                                     style: TextStyle(
                                       fontSize: 14.0,
@@ -675,10 +672,13 @@ class _GenrePageState extends State<GenrePage> {
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
+
+                          // Spacer to push the favorite icon to the end
+                          const Spacer(),
 
                           //favorite icon
                           Column(
