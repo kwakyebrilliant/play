@@ -102,80 +102,10 @@ class _GenrePageState extends State<GenrePage> {
                   ),
                 ),
 
-                //Column containing
+                //Column containing popular
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        //popular 1
-                        Container(
-                          width: MediaQuery.of(context).size.width / 2 - 20.0,
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                            borderRadius: BorderRadius.circular(8.0),
-                            border: Border.all(
-                              width: 1.0,
-                              color: const Color(0xFFF7fAFB),
-                            ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                //image
-                                Container(
-                                  height: 45.0,
-                                  width: 45.0,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8.0),
-                                    image: const DecorationImage(
-                                      image:
-                                          AssetImage("assets/images/sing1.jpg"),
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                ),
-
-                                //song name and artiste name
-                                const Padding(
-                                  padding: EdgeInsets.only(left: 8.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      //song name
-                                      Text(
-                                        "This is the way of life",
-                                        style: TextStyle(
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white,
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
-                                      ),
-
-                                      //name of artiste
-                                      Text(
-                                        "brilliant",
-                                        style: TextStyle(
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.w300,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                  children: [],
                 ),
 
                 //Recent search header text
