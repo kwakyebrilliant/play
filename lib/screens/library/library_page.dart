@@ -44,34 +44,31 @@ class _LibraryPageState extends State<LibraryPage> {
                       ),
                     ),
                   ),
+
+                  //Add playlist here
                   Padding(
                     padding: const EdgeInsets.only(top: 40.0, right: 15.0),
                     child: Row(
                       children: [
                         // Add playlist icon wrapped in a container
-                        Padding(
-                          padding: const EdgeInsets.only(right: 40.0),
-                          child: Container(
-                            height: 28.0,
-                            width: 28.0,
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                              borderRadius: BorderRadius.circular(60.0),
-                              border: Border.all(
-                                width: 1.0,
-                                color: const Color(0xFFF7fAFB),
-                              ),
-                            ),
-                            // Add playlist icon
-                            child: const Icon(
-                              Icons.add_rounded,
-                              size: 20.0,
-                              color: Colors.white,
+                        Container(
+                          height: 28.0,
+                          width: 28.0,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                            borderRadius: BorderRadius.circular(60.0),
+                            border: Border.all(
+                              width: 1.0,
+                              color: const Color(0xFFF7fAFB),
                             ),
                           ),
+                          // Add playlist icon
+                          child: const Icon(
+                            Icons.add_rounded,
+                            size: 20.0,
+                            color: Colors.white,
+                          ),
                         ),
-
-                        //search here
                       ],
                     ),
                   ),
