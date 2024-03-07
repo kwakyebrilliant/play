@@ -39,7 +39,7 @@ class _LibraryPageState extends State<LibraryPage> {
                       'Listening',
                       style: TextStyle(
                         fontSize: 20.0,
-                        fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.w600,
                         color: Color(0xFFF7fAFB),
                       ),
                     ),
@@ -76,24 +76,33 @@ class _LibraryPageState extends State<LibraryPage> {
               ),
 
               // Tab bar
-              Container(
-                child: TabBar(
-                  tabs: [
-                    Tab(
-                      text: 'Home',
-                    ),
-                    Tab(
-                      text: 'Search',
-                    ),
-                    Tab(
-                      text: 'Library',
-                    ),
-                    Tab(
-                      text: 'Settings',
-                    ),
-                  ],
+              TabBar(
+                tabs: const [
+                  Tab(
+                    text: 'Recents',
+                  ),
+                  Tab(
+                    text: 'Playlists',
+                  ),
+                  Tab(
+                    text: 'Favorites',
+                  ),
+                  Tab(
+                    text: 'Artistes',
+                  ),
+                ],
+                indicatorColor: Colors.white.withOpacity(0.1),
+                labelStyle: const TextStyle(
+                  fontSize: 17.0,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                ),
+                unselectedLabelStyle: const TextStyle(
+                  fontSize: 13.0,
+                  color: Colors.white,
                 ),
               ),
+
               // Tab bar views
               Expanded(
                 child: TabBarView(
@@ -101,25 +110,25 @@ class _LibraryPageState extends State<LibraryPage> {
                     // First tab content
                     Container(
                       child: Center(
-                        child: Text('Home Page Content'),
+                        child: Text('Recents Content'),
                       ),
                     ),
                     // Second tab content
                     Container(
                       child: Center(
-                        child: Text('Search Page Content'),
+                        child: Text('Playlists Content'),
                       ),
                     ),
                     // Third tab content
                     Container(
                       child: Center(
-                        child: Text('Library Page Content'),
+                        child: Text('Favorites Content'),
                       ),
                     ),
                     // Fourth tab content
                     Container(
                       child: Center(
-                        child: Text('Settings Page Content'),
+                        child: Text('Artistes Content'),
                       ),
                     ),
                   ],
