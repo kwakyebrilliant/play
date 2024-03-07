@@ -108,27 +108,87 @@ class _LibraryPageState extends State<LibraryPage> {
                 child: TabBarView(
                   children: [
                     // First tab content
-                    Container(
-                      child: Center(
-                        child: Text('Recents Content'),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height,
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                          borderRadius: const BorderRadius.vertical(
+                            top: Radius.circular(60.0),
+                          ),
+                          border: Border.all(
+                            width: 1.0,
+                            color: const Color(0xFFF7fAFB),
+                          ),
+                        ),
+                        child: Center(
+                          child: Text('Recents Content'),
+                        ),
                       ),
                     ),
                     // Second tab content
-                    Container(
-                      child: Center(
-                        child: Text('Playlists Content'),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height,
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                          borderRadius: const BorderRadius.vertical(
+                            top: Radius.circular(60.0),
+                          ),
+                          border: Border.all(
+                            width: 1.0,
+                            color: const Color(0xFFF7fAFB),
+                          ),
+                        ),
+                        child: Center(
+                          child: Text('Playlists Content'),
+                        ),
                       ),
                     ),
                     // Third tab content
-                    Container(
-                      child: Center(
-                        child: Text('Favorites Content'),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height,
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                          borderRadius: const BorderRadius.vertical(
+                            top: Radius.circular(60.0),
+                          ),
+                          border: Border.all(
+                            width: 1.0,
+                            color: const Color(0xFFF7fAFB),
+                          ),
+                        ),
+                        child: Center(
+                          child: Text('Favorites Content'),
+                        ),
                       ),
                     ),
                     // Fourth tab content
-                    Container(
-                      child: Center(
-                        child: Text('Artistes Content'),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: Container(
+                        height: MediaQuery.of(context).size.height,
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                          borderRadius: const BorderRadius.vertical(
+                            top: Radius.circular(60.0),
+                          ),
+                          border: Border.all(
+                            width: 1.0,
+                            color: const Color(0xFFF7fAFB),
+                          ),
+                        ),
+                        child: Center(
+                          child: Text('Artistes Content'),
+                        ),
                       ),
                     ),
                   ],
