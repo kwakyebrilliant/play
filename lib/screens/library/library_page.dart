@@ -215,7 +215,8 @@ class _LibraryPageState extends State<LibraryPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4, // Define the number of tabs
+      // Define the number of tabs
+      length: 4,
       child: Scaffold(
         body: Container(
           height: MediaQuery.of(context).size.height,
@@ -231,7 +232,9 @@ class _LibraryPageState extends State<LibraryPage> {
               ],
             ),
           ),
-          child: Column(
+          child:
+              //make this column scrollable
+              Column(
             children: [
               // Listening, create playlist and Search input
               Row(
@@ -323,7 +326,9 @@ class _LibraryPageState extends State<LibraryPage> {
                         color: const Color(0xFFF7fAFB),
                       ),
                     ),
-                    child: _tabContents[_selectedIndex],
+                    child: SingleChildScrollView(
+                      child: _tabContents[_selectedIndex],
+                    ),
                   ),
                 ),
               ),
