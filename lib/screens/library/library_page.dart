@@ -97,7 +97,8 @@ class _LibraryPageState extends State<LibraryPage> {
                   Tab(text: 'Favorites'),
                   Tab(text: 'Artists'),
                 ],
-                indicatorColor: Colors.white.withOpacity(0.1),
+                indicatorColor: Colors.white,
+                dividerColor: Colors.transparent,
                 labelStyle: const TextStyle(
                   fontSize: 17.0,
                   fontWeight: FontWeight.w600,
