@@ -208,7 +208,197 @@ class _LibraryPageState extends State<LibraryPage> {
       ],
     ),
     Center(child: Text('Playlists Content')),
-    Center(child: Text('Favorites Content')),
+    //Favorites content
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        //1
+        Padding(
+          padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 35.0),
+          child: Container(
+            padding: const EdgeInsets.all(10.0),
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: Color(0xFFF7fAFB),
+                ),
+              ),
+            ),
+            child: Row(
+              children: [
+                //image
+                Container(
+                  height: 42.0,
+                  width: 42.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    image: const DecorationImage(
+                      image: AssetImage("assets/images/sing1.jpg"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+
+                //song name and artiste name
+                const Expanded(
+                  flex: 4,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        //song name
+                        Text(
+                          "This is the way of life here ",
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+
+                        //name of artiste
+                        Text(
+                          "brilliant",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                // Spacer to push the favorite icon to the end
+                const Spacer(),
+
+                //favorite icon
+                Column(
+                  children: [
+                    // favorite icon wrapped in a container
+                    Container(
+                      height: 28.0,
+                      width: 28.0,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                        borderRadius: BorderRadius.circular(60.0),
+                        border: Border.all(
+                          width: 1.0,
+                          color: const Color(0xFFF7fAFB),
+                        ),
+                      ),
+                      // favorite icon
+                      child: const Icon(
+                        Icons.play_arrow_rounded,
+                        size: 20.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+
+        //2
+        Padding(
+          padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0),
+          child: Container(
+            padding: const EdgeInsets.all(10.0),
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: Color(0xFFF7fAFB),
+                ),
+              ),
+            ),
+            child: Row(
+              children: [
+                //image
+                Container(
+                  height: 42.0,
+                  width: 42.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    image: const DecorationImage(
+                      image: AssetImage("assets/images/sing2.jpg"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+
+                //song name and artiste name
+                const Expanded(
+                  flex: 4,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        //song name
+                        Text(
+                          "This is the way of life here ",
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+
+                        //name of artiste
+                        Text(
+                          "brilliant",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                // Spacer to push the favorite icon to the end
+                const Spacer(),
+
+                //favorite icon
+                Column(
+                  children: [
+                    // favorite icon wrapped in a container
+                    Container(
+                      height: 28.0,
+                      width: 28.0,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                        borderRadius: BorderRadius.circular(60.0),
+                        border: Border.all(
+                          width: 1.0,
+                          color: const Color(0xFFF7fAFB),
+                        ),
+                      ),
+                      // favorite icon
+                      child: const Icon(
+                        Icons.play_arrow_rounded,
+                        size: 20.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    ),
     Center(child: Text('Artists Content')),
   ];
 
