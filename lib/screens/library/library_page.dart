@@ -1,5 +1,7 @@
+// Import necessary libraries
 import 'package:flutter/material.dart';
 
+// Define the LibraryPage widget
 class LibraryPage extends StatefulWidget {
   const LibraryPage({Key? key}) : super(key: key);
 
@@ -7,7 +9,19 @@ class LibraryPage extends StatefulWidget {
   State<LibraryPage> createState() => _LibraryPageState();
 }
 
+// Define the state for the LibraryPage widget
 class _LibraryPageState extends State<LibraryPage> {
+  // Index of the selected tab
+  int _selectedIndex = 0;
+
+  // Define tab contents
+  final List<Widget> _tabContents = [
+    Center(child: Text('Recents Content')),
+    Center(child: Text('Playlists Content')),
+    Center(child: Text('Favorites Content')),
+    Center(child: Text('Artists Content')),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -78,18 +92,10 @@ class _LibraryPageState extends State<LibraryPage> {
               // Tab bar
               TabBar(
                 tabs: const [
-                  Tab(
-                    text: 'Recents',
-                  ),
-                  Tab(
-                    text: 'Playlists',
-                  ),
-                  Tab(
-                    text: 'Favorites',
-                  ),
-                  Tab(
-                    text: 'Artistes',
-                  ),
+                  Tab(text: 'Recents'),
+                  Tab(text: 'Playlists'),
+                  Tab(text: 'Favorites'),
+                  Tab(text: 'Artists'),
                 ],
                 indicatorColor: Colors.white.withOpacity(0.1),
                 labelStyle: const TextStyle(
@@ -101,97 +107,32 @@ class _LibraryPageState extends State<LibraryPage> {
                   fontSize: 13.0,
                   color: Colors.white,
                 ),
+                // Update the selected tab index
+                onTap: (index) {
+                  setState(() {
+                    _selectedIndex = index;
+                  });
+                },
               ),
 
-              // Tab bar views
+              // Display the selected tab content
               Expanded(
-                child: TabBarView(
-                  children: [
-                    // First tab content
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20.0),
-                      child: Container(
-                        height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                          borderRadius: const BorderRadius.vertical(
-                            top: Radius.circular(60.0),
-                          ),
-                          border: Border.all(
-                            width: 1.0,
-                            color: const Color(0xFFF7fAFB),
-                          ),
-                        ),
-                        child: Center(
-                          child: Text('Recents Content'),
-                        ),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                      borderRadius: const BorderRadius.vertical(
+                        top: Radius.circular(60.0),
+                      ),
+                      border: Border.all(
+                        width: 1.0,
+                        color: const Color(0xFFF7fAFB),
                       ),
                     ),
-                    // Second tab content
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20.0),
-                      child: Container(
-                        height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                          borderRadius: const BorderRadius.vertical(
-                            top: Radius.circular(60.0),
-                          ),
-                          border: Border.all(
-                            width: 1.0,
-                            color: const Color(0xFFF7fAFB),
-                          ),
-                        ),
-                        child: Center(
-                          child: Text('Playlists Content'),
-                        ),
-                      ),
-                    ),
-                    // Third tab content
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20.0),
-                      child: Container(
-                        height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                          borderRadius: const BorderRadius.vertical(
-                            top: Radius.circular(60.0),
-                          ),
-                          border: Border.all(
-                            width: 1.0,
-                            color: const Color(0xFFF7fAFB),
-                          ),
-                        ),
-                        child: Center(
-                          child: Text('Favorites Content'),
-                        ),
-                      ),
-                    ),
-                    // Fourth tab content
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20.0),
-                      child: Container(
-                        height: MediaQuery.of(context).size.height,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                          borderRadius: const BorderRadius.vertical(
-                            top: Radius.circular(60.0),
-                          ),
-                          border: Border.all(
-                            width: 1.0,
-                            color: const Color(0xFFF7fAFB),
-                          ),
-                        ),
-                        child: Center(
-                          child: Text('Artistes Content'),
-                        ),
-                      ),
-                    ),
-                  ],
+                    child: _tabContents[_selectedIndex],
+                  ),
                 ),
               ),
             ],
