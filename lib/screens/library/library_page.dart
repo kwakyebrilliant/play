@@ -16,7 +16,13 @@ class _LibraryPageState extends State<LibraryPage> {
 
   // Define tab contents
   final List<Widget> _tabContents = [
-    Center(child: Text('Recents Content')),
+    //Recents content
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Recents Content'),
+      ],
+    ),
     Center(child: Text('Playlists Content')),
     Center(child: Text('Favorites Content')),
     Center(child: Text('Artists Content')),
