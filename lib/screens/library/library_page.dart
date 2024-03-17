@@ -293,7 +293,7 @@ class _LibraryPageState extends State<LibraryPage> {
                       ),
                       // favorite icon
                       child: const Icon(
-                        Icons.play_arrow_rounded,
+                        Icons.favorite_rounded,
                         size: 20.0,
                         color: Colors.white,
                       ),
@@ -386,7 +386,7 @@ class _LibraryPageState extends State<LibraryPage> {
                       ),
                       // favorite icon
                       child: const Icon(
-                        Icons.play_arrow_rounded,
+                        Icons.favorite_rounded,
                         size: 20.0,
                         color: Colors.white,
                       ),
