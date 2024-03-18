@@ -399,11 +399,128 @@ class _LibraryPageState extends State<LibraryPage> {
         ),
       ],
     ),
-    Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Center(child: Text('Artists Content')),
-      ],
+    Padding(
+      padding: const EdgeInsets.only(left: 7.0, right: 7.0, top: 15.0),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                //1
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF667b80),
+                      borderRadius: BorderRadius.circular(8.0),
+                      border: Border.all(
+                        width: 1.0,
+                        color: const Color(0xFFF7fAFB),
+                      ),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(20.0),
+                      child: Center(
+                        child: Text(
+                          'Global 100',
+                          style: TextStyle(
+                            color: Color(0xFFF7fAFB),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+                //2
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF667b80),
+                      borderRadius: BorderRadius.circular(8.0),
+                      border: Border.all(
+                        width: 1.0,
+                        color: const Color(0xFFF7fAFB),
+                      ),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(20.0),
+                      child: Center(
+                        child: Text(
+                          'Afrobeat 10',
+                          style: TextStyle(
+                            color: Color(0xFFF7fAFB),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                //3
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF667b80),
+                      borderRadius: BorderRadius.circular(8.0),
+                      border: Border.all(
+                        width: 1.0,
+                        color: const Color(0xFFF7fAFB),
+                      ),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(20.0),
+                      child: Center(
+                        child: Text(
+                          'Highlife Top 50',
+                          style: TextStyle(
+                            color: Color(0xFFF7fAFB),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+                //4
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF667b80),
+                      borderRadius: BorderRadius.circular(8.0),
+                      border: Border.all(
+                        width: 1.0,
+                        color: const Color(0xFFF7fAFB),
+                      ),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(20.0),
+                      child: Center(
+                        child: Text(
+                          'Amapiano 10',
+                          style: TextStyle(
+                            color: Color(0xFFF7fAFB),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     ),
   ];
 
@@ -483,7 +600,7 @@ class _LibraryPageState extends State<LibraryPage> {
                   Tab(text: 'Recents'),
                   Tab(text: 'Playlists'),
                   Tab(text: 'Favorites'),
-                  Tab(text: 'Artists'),
+                  Tab(text: 'Charts'),
                 ],
                 indicatorColor: Colors.white,
                 dividerColor: Colors.transparent,
