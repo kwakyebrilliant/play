@@ -399,8 +399,10 @@ class _LibraryPageState extends State<LibraryPage> {
         ),
       ],
     ),
+
+    //Charts contents here
     Padding(
-      padding: const EdgeInsets.only(left: 7.0, right: 7.0, top: 15.0),
+      padding: const EdgeInsets.only(left: 7.0, right: 7.0, top: 27.0),
       child: Row(
         children: [
           Expanded(
@@ -458,6 +460,32 @@ class _LibraryPageState extends State<LibraryPage> {
                     ),
                   ),
                 ),
+
+                //3
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF667b80),
+                      borderRadius: BorderRadius.circular(8.0),
+                      border: Border.all(
+                        width: 1.0,
+                        color: const Color(0xFFF7fAFB),
+                      ),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(20.0),
+                      child: Center(
+                        child: Text(
+                          'Hip Life 15',
+                          style: TextStyle(
+                            color: Color(0xFFF7fAFB),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -465,7 +493,7 @@ class _LibraryPageState extends State<LibraryPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                //3
+                //4
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -491,7 +519,7 @@ class _LibraryPageState extends State<LibraryPage> {
                   ),
                 ),
 
-                //4
+                //5
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
@@ -508,6 +536,32 @@ class _LibraryPageState extends State<LibraryPage> {
                       child: Center(
                         child: Text(
                           'Amapiano 10',
+                          style: TextStyle(
+                            color: Color(0xFFF7fAFB),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
+                //6
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF667b80),
+                      borderRadius: BorderRadius.circular(8.0),
+                      border: Border.all(
+                        width: 1.0,
+                        color: const Color(0xFFF7fAFB),
+                      ),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(20.0),
+                      child: Center(
+                        child: Text(
+                          'Pop 100',
                           style: TextStyle(
                             color: Color(0xFFF7fAFB),
                           ),
