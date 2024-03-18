@@ -208,7 +208,7 @@ class _LibraryPageState extends State<LibraryPage> {
       ],
     ),
     const Center(child: Text('Playlists Content')),
-    //Favorites contents
+    //Favorites content
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -399,7 +399,12 @@ class _LibraryPageState extends State<LibraryPage> {
         ),
       ],
     ),
-    Center(child: Text('Artists Content')),
+    Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Center(child: Text('Artists Content')),
+      ],
+    ),
   ];
 
   @override
