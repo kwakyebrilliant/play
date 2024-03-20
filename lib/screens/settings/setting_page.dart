@@ -299,6 +299,21 @@ class _SettingPageState extends State<SettingPage> {
                     ],
                   ),
                 ),
+
+                //Other items here
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFE3E5E5).withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(20.0),
+                    border: Border.all(
+                      color: const Color(0xFFF7fAFB),
+                      width: 1.0,
+                    ),
+                  ),
+                  child: Column(
+                    children: [],
+                  ),
+                ),
               ],
             ),
           ),
