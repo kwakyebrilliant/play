@@ -411,7 +411,114 @@ class _SettingPageState extends State<SettingPage> {
                           ],
                         ),
                       ),
+
+                      //about here
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 20.0),
+                                  child: Container(
+                                    height: 55.0,
+                                    width: 55.0,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFE3E5E5)
+                                          .withOpacity(0.7),
+                                      borderRadius: BorderRadius.circular(20.0),
+                                    ),
+                                    // information icon
+                                    child: const Icon(
+                                      Icons.info_rounded,
+                                      size: 30.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+
+                                //about us text here
+                                const Padding(
+                                  padding: EdgeInsets.only(left: 10.0),
+                                  child: Text(
+                                    'About Us',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            //arrow right icon here
+                            const Icon(
+                              Icons.arrow_right_rounded,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      //theme here
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 20.0),
+                                  child: Container(
+                                    height: 55.0,
+                                    width: 55.0,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFE3E5E5)
+                                          .withOpacity(0.7),
+                                      borderRadius: BorderRadius.circular(20.0),
+                                    ),
+                                    // toggle on rounded icon
+                                    child: const Icon(
+                                      Icons.toggle_on_rounded,
+                                      size: 30.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+
+                                //themes text here
+                                const Padding(
+                                  padding: EdgeInsets.only(left: 10.0),
+                                  child: Text(
+                                    'Themes',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
+                  ),
+                ),
+
+                //logout text here
+                const Center(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 30.0),
+                    child: Text(
+                      'LOGOUT',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
               ],
