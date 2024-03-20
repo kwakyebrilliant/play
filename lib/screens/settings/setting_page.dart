@@ -311,7 +311,31 @@ class _SettingPageState extends State<SettingPage> {
                     ),
                   ),
                   child: Column(
-                    children: [],
+                    children: [
+                      //account here
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 3.0),
+                            child: Container(
+                              height: 55.0,
+                              width: 55.0,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              // workspace premium icon
+                              child: const Icon(
+                                Icons.workspace_premium_rounded,
+                                size: 30.0,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ],
