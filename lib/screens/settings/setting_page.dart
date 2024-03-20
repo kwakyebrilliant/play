@@ -98,7 +98,7 @@ class _SettingPageState extends State<SettingPage> {
 
                     //notification icon
                     const Icon(
-                      Icons.notifications,
+                      Icons.notifications_on,
                       size: 30.0,
                       color: Colors.white,
                     ),
@@ -312,28 +312,104 @@ class _SettingPageState extends State<SettingPage> {
                   ),
                   child: Column(
                     children: [
-                      //account here
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 3.0),
-                            child: Container(
-                              height: 55.0,
-                              width: 55.0,
-                              decoration: BoxDecoration(
-                                color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              // workspace premium icon
-                              child: const Icon(
-                                Icons.workspace_premium_rounded,
-                                size: 30.0,
-                                color: Colors.white,
-                              ),
+                      //notifications here
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 20.0),
+                                  child: Container(
+                                    height: 55.0,
+                                    width: 55.0,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFE3E5E5)
+                                          .withOpacity(0.7),
+                                      borderRadius: BorderRadius.circular(20.0),
+                                    ),
+                                    // notification icon
+                                    child: const Icon(
+                                      Icons.notifications,
+                                      size: 30.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+
+                                //notifications text here
+                                const Padding(
+                                  padding: EdgeInsets.only(left: 10.0),
+                                  child: Text(
+                                    'Notifications',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
-                        ],
+
+                            //arrow right icon here
+                            const Icon(
+                              Icons.arrow_right_rounded,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      //audio quality here
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 20.0),
+                                  child: Container(
+                                    height: 55.0,
+                                    width: 55.0,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFE3E5E5)
+                                          .withOpacity(0.7),
+                                      borderRadius: BorderRadius.circular(20.0),
+                                    ),
+                                    // speaker icon
+                                    child: const Icon(
+                                      Icons.speaker_rounded,
+                                      size: 30.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+
+                                //audio quality text here
+                                const Padding(
+                                  padding: EdgeInsets.only(left: 10.0),
+                                  child: Text(
+                                    'Audio Quality',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            //arrow right icon here
+                            const Icon(
+                              Icons.arrow_right_rounded,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
