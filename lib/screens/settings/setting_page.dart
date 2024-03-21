@@ -412,7 +412,7 @@ class _SettingPageState extends State<SettingPage> {
                         ),
                       ),
 
-                      //about here
+                      //about us here
                       Padding(
                         padding: const EdgeInsets.only(top: 20.0),
                         child: Row(
