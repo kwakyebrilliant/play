@@ -447,6 +447,29 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
+
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: Center(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF667b80),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text(
+                              'See More >',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xFFF7fAFB),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ],
