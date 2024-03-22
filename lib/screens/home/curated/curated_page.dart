@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:play/screens/home/curated/curateddetails_page.dart';
 
 class CuratedPage extends StatefulWidget {
   const CuratedPage({super.key});
@@ -17,67 +18,77 @@ class _CuratedPageState extends State<CuratedPage> {
           children: [
             // curated 1
             Expanded(
-              child: Container(
-                margin: const EdgeInsets.only(right: 15.0),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                  borderRadius: BorderRadius.circular(8.0),
-                  border: Border.all(
-                    width: 1.0,
-                    color: const Color(0xFFF7fAFB),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CuratedDetailsPage(),
+                    ),
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(right: 15.0),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                    borderRadius: BorderRadius.circular(8.0),
+                    border: Border.all(
+                      width: 1.0,
+                      color: const Color(0xFFF7fAFB),
+                    ),
                   ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      //image
-                      Container(
-                        height: 42.0,
-                        width: 42.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          image: const DecorationImage(
-                            image: AssetImage("assets/images/sing1.jpg"),
-                            fit: BoxFit.cover,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        //image
+                        Container(
+                          height: 42.0,
+                          width: 42.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8.0),
+                            image: const DecorationImage(
+                              image: AssetImage("assets/images/sing1.jpg"),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
-                      ),
 
-                      //curated name and number of songs
-                      const Flexible(
-                        child: Padding(
-                          padding: EdgeInsets.only(left: 8.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              //curated name
-                              Text(
-                                "Africa drill now",
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white,
-                                  overflow: TextOverflow.ellipsis,
+                        //curated name and number of songs
+                        const Flexible(
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                //curated name
+                                Text(
+                                  "Africa drill now",
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
                                 ),
-                              ),
 
-                              //number of songs
-                              Text(
-                                "20 songs",
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.w300,
-                                  color: Colors.white,
-                                  overflow: TextOverflow.ellipsis,
+                                //number of songs
+                                Text(
+                                  "20 songs",
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.w300,
+                                    color: Colors.white,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
