@@ -697,6 +697,137 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
+
+                //Featured Charts header text
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Featured Charts',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Color(0xFFF7fAFB),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                //Featured Charts start here
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      //1
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF667b80),
+                            borderRadius: BorderRadius.circular(8.0),
+                            border: Border.all(
+                              width: 1.0,
+                              color: const Color(0xFFF7fAFB),
+                            ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(20.0),
+                            child: Center(
+                              child: Text(
+                                'Global 100',
+                                style: TextStyle(
+                                  color: Color(0xFFF7fAFB),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      //2
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF667b80),
+                            borderRadius: BorderRadius.circular(8.0),
+                            border: Border.all(
+                              width: 1.0,
+                              color: const Color(0xFFF7fAFB),
+                            ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(20.0),
+                            child: Center(
+                              child: Text(
+                                'Afrobeat 10',
+                                style: TextStyle(
+                                  color: Color(0xFFF7fAFB),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      //3
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF667b80),
+                            borderRadius: BorderRadius.circular(8.0),
+                            border: Border.all(
+                              width: 1.0,
+                              color: const Color(0xFFF7fAFB),
+                            ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(20.0),
+                            child: Center(
+                              child: Text(
+                                'Hip Life 15',
+                                style: TextStyle(
+                                  color: Color(0xFFF7fAFB),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      //4
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF667b80),
+                            borderRadius: BorderRadius.circular(8.0),
+                            border: Border.all(
+                              width: 1.0,
+                              color: const Color(0xFFF7fAFB),
+                            ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(20.0),
+                            child: Center(
+                              child: Text(
+                                'Highlife Top 50',
+                                style: TextStyle(
+                                  color: Color(0xFFF7fAFB),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
