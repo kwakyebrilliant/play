@@ -85,9 +85,9 @@ class _SettingPageState extends State<SettingPage> {
                               const Text(
                                 '@Brilliant',
                                 style: TextStyle(
-                                  fontSize: 18.0,
+                                  fontSize: 20.0,
                                   color: Color(0xFFF7fAFB),
-                                  fontWeight: FontWeight.w400,
+                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                             ],
