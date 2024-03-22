@@ -472,6 +472,231 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
+
+                //Trending musics header text
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Trending Musics',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Color(0xFFF7fAFB),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                //Trending musics start here
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      //trending 1
+                      Padding(
+                        padding: const EdgeInsets.only(right: 20.0),
+                        child: Container(
+                          height: 150.0,
+                          width: 150.0,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFE3E5E5).withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: Stack(
+                            children: [
+                              // Image
+                              Container(
+                                height: 120.0,
+                                width: 150.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  image: const DecorationImage(
+                                    image:
+                                        AssetImage("assets/images/sing1.jpg"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+
+                              // Name of the song
+                              const Positioned(
+                                bottom: 5.0,
+                                left: 5.0,
+                                right: 5.0,
+                                child: Text(
+                                  'This is the way of life in',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                  textAlign: TextAlign.left,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+
+                              // Name of Artist
+                              Positioned(
+                                top: 80.0,
+                                left: 0,
+                                right: 5.0,
+                                child: Container(
+                                  padding: const EdgeInsets.all(8.0),
+                                  decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  child: const Text(
+                                    'Kezia',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+
+                      //trending 2
+                      Padding(
+                        padding: const EdgeInsets.only(right: 20.0),
+                        child: Container(
+                          height: 150.0,
+                          width: 150.0,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFE3E5E5).withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: Stack(
+                            children: [
+                              // Image
+                              Container(
+                                height: 120.0,
+                                width: 150.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  image: const DecorationImage(
+                                    image:
+                                        AssetImage("assets/images/sing2.jpg"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+
+                              // Name of the song
+                              const Positioned(
+                                bottom: 5.0,
+                                left: 5.0,
+                                right: 5.0,
+                                child: Text(
+                                  'L.I.F.E',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                  textAlign: TextAlign.left,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+
+                              // Name of Artist
+                              Positioned(
+                                top: 80.0,
+                                left: 0,
+                                right: 5.0,
+                                child: Container(
+                                  padding: const EdgeInsets.all(8.0),
+                                  decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  child: const Text(
+                                    'Brilliant',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+
+                      //trending 3
+                      Padding(
+                        padding: const EdgeInsets.only(right: 20.0),
+                        child: Container(
+                          height: 150.0,
+                          width: 150.0,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFE3E5E5).withOpacity(0.2),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: Stack(
+                            children: [
+                              // Image
+                              Container(
+                                height: 120.0,
+                                width: 150.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  image: const DecorationImage(
+                                    image:
+                                        AssetImage("assets/images/sing1.jpg"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+
+                              // Name of the song
+                              const Positioned(
+                                bottom: 5.0,
+                                left: 5.0,
+                                right: 5.0,
+                                child: Text(
+                                  'Azonto fieasta',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                  textAlign: TextAlign.left,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+
+                              // Name of Artist
+                              Positioned(
+                                top: 80.0,
+                                left: 0,
+                                right: 5.0,
+                                child: Container(
+                                  padding: const EdgeInsets.all(8.0),
+                                  decoration: BoxDecoration(
+                                    color: Colors.black.withOpacity(0.5),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                  child: const Text(
+                                    'egya p',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
