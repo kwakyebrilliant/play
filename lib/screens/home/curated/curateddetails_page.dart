@@ -47,318 +47,67 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Column(
               children: [
-                //Genre header and popular text
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Popular',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          color: Color(0xFFF7fAFB),
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                //Column containing popular
-                Column(
+                //curated image and other details
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: [
-                        // popular 1
-                        Expanded(
-                          child: Container(
-                            margin: const EdgeInsets.only(right: 15.0),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                              borderRadius: BorderRadius.circular(8.0),
-                              border: Border.all(
-                                width: 1.0,
-                                color: const Color(0xFFF7fAFB),
-                              ),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  //image
-                                  Container(
-                                    height: 42.0,
-                                    width: 42.0,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      image: const DecorationImage(
-                                        image: AssetImage(
-                                            "assets/images/sing1.jpg"),
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-
-                                  //song name and artiste name
-                                  const Flexible(
-                                    child: Padding(
-                                      padding: EdgeInsets.only(left: 8.0),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          //song name
-                                          Text(
-                                            "This is the way of life",
-                                            style: TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.white,
-                                              overflow: TextOverflow.ellipsis,
-                                            ),
-                                          ),
-
-                                          //name of artiste
-                                          Text(
-                                            "brilliant",
-                                            style: TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.w300,
-                                              color: Colors.white,
-                                              overflow: TextOverflow.ellipsis,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
+                    //curated image starts here
+                    Container(
+                      height: 150.0,
+                      width: 150.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        image: const DecorationImage(
+                          image: AssetImage("assets/images/sing1.jpg"),
+                          fit: BoxFit.cover,
                         ),
-
-                        //popular 2
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                              borderRadius: BorderRadius.circular(8.0),
-                              border: Border.all(
-                                width: 1.0,
-                                color: const Color(0xFFF7fAFB),
-                              ),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  //image
-                                  Container(
-                                    height: 42.0,
-                                    width: 42.0,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      image: const DecorationImage(
-                                        image: AssetImage(
-                                            "assets/images/sing2.jpg"),
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-
-                                  //song name and artiste name
-                                  const Flexible(
-                                    child: Padding(
-                                      padding: EdgeInsets.only(left: 8.0),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          //song name
-                                          Text(
-                                            "This is the way of life",
-                                            style: TextStyle(
-                                              fontSize: 16.0,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.white,
-                                              overflow: TextOverflow.ellipsis,
-                                            ),
-                                          ),
-
-                                          //name of artiste
-                                          Text(
-                                            "brilliant",
-                                            style: TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
 
-                    //sized box
-                    const SizedBox(height: 8),
-                    Row(
-                      children: [
-                        // popular 3
-                        Expanded(
-                          child: Container(
-                            margin: const EdgeInsets.only(right: 15.0),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                              borderRadius: BorderRadius.circular(8.0),
-                              border: Border.all(
-                                width: 1.0,
-                                color: const Color(0xFFF7fAFB),
-                              ),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  //image
-                                  Container(
-                                    height: 42.0,
-                                    width: 42.0,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      image: const DecorationImage(
-                                        image: AssetImage(
-                                            "assets/images/sing2.jpg"),
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-
-                                  //song name and artiste name
-                                  const Flexible(
-                                    child: Padding(
-                                      padding: EdgeInsets.only(left: 8.0),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          //song name
-                                          Text(
-                                            "This is the way of life",
-                                            style: TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.white,
-                                              overflow: TextOverflow.ellipsis,
-                                            ),
-                                          ),
-
-                                          //name of artiste
-                                          Text(
-                                            "brilliant",
-                                            style: TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.w300,
-                                              color: Colors.white,
-                                              overflow: TextOverflow.ellipsis,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
+                    //other details of curated
+                    const Padding(
+                      padding: EdgeInsets.only(left: 15.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Africa Drill Now',
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                              overflow: TextOverflow.ellipsis,
                             ),
                           ),
-                        ),
-
-                        //popular 4
-                        Expanded(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                              borderRadius: BorderRadius.circular(8.0),
-                              border: Border.all(
-                                width: 1.0,
-                                color: const Color(0xFFF7fAFB),
-                              ),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  //image
-                                  Container(
-                                    height: 42.0,
-                                    width: 42.0,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      image: const DecorationImage(
-                                        image: AssetImage(
-                                            "assets/images/sing1.jpg"),
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-
-                                  //song name and artiste name
-                                  const Flexible(
-                                    child: Padding(
-                                      padding: EdgeInsets.only(left: 8.0),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          //song name
-                                          Text(
-                                            "This is the way of life",
-                                            style: TextStyle(
-                                              fontSize: 16.0,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.white,
-                                              overflow: TextOverflow.ellipsis,
-                                            ),
-                                          ),
-
-                                          //name of artiste
-                                          Text(
-                                            "brilliant",
-                                            style: TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.w500,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
+                          Text(
+                            'Curated by: Brilliants',
+                            style: TextStyle(
+                              fontSize: 14.0,
                             ),
                           ),
-                        ),
-                      ],
+                          Text(
+                            '2024',
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              color: Colors.yellow,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
+                ),
+
+                const Padding(
+                  padding: EdgeInsets.only(top: 15.0),
+                  child: Text(
+                    'Simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
 
                 //Recent search header text
