@@ -71,6 +71,7 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          //title of the curated
                           Text(
                             'Africa Drill Now',
                             style: TextStyle(
@@ -80,12 +81,16 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
+
+                          //persons that curated the list
                           Text(
                             'Curated by: Brilliants',
                             style: TextStyle(
                               fontSize: 14.0,
                             ),
                           ),
+
+                          //year it was curated
                           Text(
                             '2024',
                             style: TextStyle(
@@ -107,6 +112,7 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                     style: TextStyle(
                       color: Colors.white,
                     ),
+                    textAlign: TextAlign.justify,
                   ),
                 ),
 
