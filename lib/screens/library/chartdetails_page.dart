@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class ChartDetailsPage extends StatefulWidget {
   const ChartDetailsPage({super.key});
@@ -63,6 +64,37 @@ class _ChartDetailsPageState extends State<ChartDetailsPage> {
                           size: 62.0,
                           color: Colors.white,
                         ),
+                      ),
+                    ),
+
+                    //header text starts here
+                    const Positioned(
+                      bottom: 45.0,
+                      left: 0.0,
+                      right: 0.0,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          //first text
+                          Text(
+                            'TOP 100',
+                            style: TextStyle(
+                              fontSize: 45.0,
+                              fontWeight: FontWeight.w800,
+                              color: Color(0xFFF7fAFB),
+                            ),
+                          ),
+
+                          //second text
+                          Text(
+                            'Global',
+                            style: TextStyle(
+                              fontSize: 24.0,
+                              fontWeight: FontWeight.w800,
+                              color: Color(0xFFF7fAFB),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
