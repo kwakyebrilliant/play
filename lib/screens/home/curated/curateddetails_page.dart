@@ -47,12 +47,11 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Column(
               children: [
-                //curated image and other details
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    //curated image starts here
+                    // Curated image
                     Container(
                       height: 150.0,
                       width: 150.0,
@@ -65,38 +64,63 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                       ),
                     ),
 
-                    //other details of curated
-                    const Padding(
-                      padding: EdgeInsets.only(left: 15.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                    // Other details of curated
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15.0),
+                      child: Stack(
                         children: [
-                          //title of the curated
-                          Text(
-                            'Africa Drill Now',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white,
-                              overflow: TextOverflow.ellipsis,
+                          Container(
+                            height: 150.0,
+                            width: 150.0,
+                            child: const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // Title of the curated
+                                Text(
+                                  'Africa Drill Now',
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.white,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+
+                                // Persons that curated the list
+                                Text(
+                                  'Curated by: Brilliants',
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                  ),
+                                ),
+
+                                // Year it was curated
+                                Text(
+                                  '2024',
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                    color: Colors.yellow,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
 
-                          //persons that curated the list
-                          Text(
-                            'Curated by: Brilliants',
-                            style: TextStyle(
-                              fontSize: 14.0,
-                            ),
-                          ),
-
-                          //year it was curated
-                          Text(
-                            '2024',
-                            style: TextStyle(
-                              fontSize: 14.0,
-                              color: Colors.yellow,
-                              overflow: TextOverflow.ellipsis,
+                          // Number of songs positioned at the bottom
+                          const Positioned(
+                            bottom: 0,
+                            left: 0,
+                            child: Padding(
+                              padding: EdgeInsets.only(bottom: 8.0),
+                              child: Text(
+                                '80 songs',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  color: Colors.yellow,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
                             ),
                           ),
                         ],
