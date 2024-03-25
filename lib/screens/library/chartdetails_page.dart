@@ -28,6 +28,7 @@ class _ChartDetailsPageState extends State<ChartDetailsPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              //top image
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: 200.0,
@@ -48,12 +49,15 @@ class _ChartDetailsPageState extends State<ChartDetailsPage> {
                         ),
                       ),
                     ),
+
+                    //arrow left here
                     Positioned(
                       top: 20.0,
                       child: GestureDetector(
                         onTap: () {
                           Navigator.of(context).pop();
                         },
+                        //arrow left icon
                         child: const Icon(
                           Icons.arrow_left_rounded,
                           size: 62.0,
