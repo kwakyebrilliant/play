@@ -38,6 +38,31 @@ class _ChartDetailsPageState extends State<ChartDetailsPage> {
                     fit: BoxFit.cover,
                   ),
                 ),
+                child: Stack(
+                  children: [
+                    Positioned.fill(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          color: const Color(0xFFE3E5E5).withOpacity(0.2),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      top: 20.0,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: const Icon(
+                          Icons.arrow_left_rounded,
+                          size: 62.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
