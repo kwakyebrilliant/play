@@ -32,7 +32,7 @@ class _ChartDetailsPageState extends State<ChartDetailsPage> {
                 width: MediaQuery.of(context).size.width,
                 height: 200.0,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8.0),
+                  borderRadius: BorderRadius.circular(20.0),
                   image: const DecorationImage(
                     image: AssetImage("assets/images/sing1.jpg"),
                     fit: BoxFit.cover,

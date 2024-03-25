@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:play/screens/home/curated/curated_page.dart';
+import 'package:play/screens/library/chartdetails_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -410,22 +411,32 @@ class _HomePageState extends State<HomePage> {
                       //1
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF667b80),
-                            borderRadius: BorderRadius.circular(8.0),
-                            border: Border.all(
-                              width: 1.0,
-                              color: const Color(0xFFF7fAFB),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const ChartDetailsPage(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF667b80),
+                              borderRadius: BorderRadius.circular(8.0),
+                              border: Border.all(
+                                width: 1.0,
+                                color: const Color(0xFFF7fAFB),
+                              ),
                             ),
-                          ),
-                          child: const Padding(
-                            padding: EdgeInsets.all(20.0),
-                            child: Center(
-                              child: Text(
-                                'Global 100',
-                                style: TextStyle(
-                                  color: Color(0xFFF7fAFB),
+                            child: const Padding(
+                              padding: EdgeInsets.all(20.0),
+                              child: Center(
+                                child: Text(
+                                  'Global 100',
+                                  style: TextStyle(
+                                    color: Color(0xFFF7fAFB),
+                                  ),
                                 ),
                               ),
                             ),
