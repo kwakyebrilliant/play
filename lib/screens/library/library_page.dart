@@ -207,7 +207,10 @@ class _LibraryPageState extends State<LibraryPage> {
         ),
       ],
     ),
+
+    //Playlist contents
     const Center(child: Text('Playlists Content')),
+
     //Favorites content
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
