@@ -91,6 +91,16 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                                   'Curated by: Brilliants',
                                   style: TextStyle(
                                     fontSize: 14.0,
+                                    color: Colors.orangeAccent,
+                                  ),
+                                ),
+
+                                // number of songs
+                                Text(
+                                  '80 songs',
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                    color: Colors.orangeAccent,
                                   ),
                                 ),
 
@@ -99,7 +109,7 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                                   '2024',
                                   style: TextStyle(
                                     fontSize: 14.0,
-                                    color: Colors.yellow,
+                                    color: Color(0xFFE3E5E5),
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
@@ -107,18 +117,17 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                             ),
                           ),
 
-                          // Number of songs positioned at the bottom
+                          // Number of listens
                           const Positioned(
                             bottom: 0,
                             left: 0,
                             child: Padding(
                               padding: EdgeInsets.only(bottom: 8.0),
                               child: Text(
-                                '80 songs',
+                                '2k listens',
                                 style: TextStyle(
                                   fontSize: 14.0,
-                                  color: Colors.yellow,
-                                  overflow: TextOverflow.ellipsis,
+                                  color: Color(0xFFE3E5E5),
                                 ),
                               ),
                             ),
