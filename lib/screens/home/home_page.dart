@@ -84,140 +84,136 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 //profile, greeting and username
-                Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFE3E5E5).withOpacity(0.7),
-                      borderRadius: BorderRadius.circular(20.0),
-                      border: Border.all(
-                        width: 1.0,
-                        color: const Color(0xFFF7fAFB),
-                      ),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                    borderRadius: BorderRadius.circular(20.0),
+                    border: Border.all(
+                      width: 1.0,
+                      color: const Color(0xFFF7fAFB),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          //greetings, username, type of user
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Padding(
-                                padding: EdgeInsets.only(bottom: 8.0),
-                                child: Row(
-                                  children: [
-                                    //verified icon
-                                    Padding(
-                                      padding: EdgeInsets.only(right: 3.0),
-                                      child: Icon(
-                                        Icons.verified_rounded,
-                                        size: 20.0,
-                                        color: Color(0xFF667b80),
-                                      ),
-                                    ),
-
-                                    //type of user text
-                                    Text(
-                                      'Premium User',
-                                      style: TextStyle(
-                                        color: Color(0xFF667b80),
-                                        fontSize: 16.0,
-                                        fontWeight: FontWeight.w600,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-
-                              //Greetings here
-                              Text(
-                                '${_greetUser()},',
-                                style: const TextStyle(
-                                  fontSize: 14.0,
-                                  color: Color(0xFFF7fAFB),
-                                  fontWeight: FontWeight.w300,
-                                ),
-                              ),
-
-                              //username here
-                              const Text(
-                                '@Kezia',
-                                style: TextStyle(
-                                  fontSize: 20.0,
-                                  color: Color(0xFFF7fAFB),
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-
-                              //play text and icon
-                              Padding(
-                                padding: const EdgeInsets.only(top: 8.0),
-
-                                //container wrapping play text and icon
-                                child: Container(
-                                  height: 28.0,
-                                  width: 100.0,
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xFF667b80)
-                                        .withOpacity(0.7),
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-
-                                  // play text and icon
-                                  child: const Padding(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 5.0),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        //play text
-                                        Text(
-                                          'Play Now',
-                                          style: TextStyle(
-                                            fontSize: 14.0,
-                                            color: Color(0xFFF7fAFB),
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                        ),
-
-                                        //play icon
-                                        Icon(
-                                          Icons.play_arrow_rounded,
-                                          size: 20.0,
-                                          color: Colors.white,
-                                        ),
-                                      ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        //greetings, username, type of user
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.only(bottom: 8.0),
+                              child: Row(
+                                children: [
+                                  //verified icon
+                                  Padding(
+                                    padding: EdgeInsets.only(right: 3.0),
+                                    child: Icon(
+                                      Icons.verified_rounded,
+                                      size: 20.0,
+                                      color: Color(0xFF667b80),
                                     ),
                                   ),
-                                ),
-                              ),
-                            ],
-                          ),
 
-                          //image
-                          Column(
-                            children: [
-                              Container(
-                                height: 120.0,
-                                width: 120.0,
+                                  //type of user text
+                                  Text(
+                                    'Premium User',
+                                    style: TextStyle(
+                                      color: Color(0xFF667b80),
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            //Greetings here
+                            Text(
+                              '${_greetUser()},',
+                              style: const TextStyle(
+                                fontSize: 14.0,
+                                color: Color(0xFFF7fAFB),
+                                fontWeight: FontWeight.w300,
+                              ),
+                            ),
+
+                            //username here
+                            const Text(
+                              '@Kezia',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Color(0xFFF7fAFB),
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+
+                            //play text and icon
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0),
+
+                              //container wrapping play text and icon
+                              child: Container(
+                                height: 28.0,
+                                width: 100.0,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20.0),
-                                  image: const DecorationImage(
-                                    image:
-                                        AssetImage("assets/images/sing1.jpg"),
-                                    fit: BoxFit.cover,
+                                  color:
+                                      const Color(0xFF667b80).withOpacity(0.7),
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+
+                                // play text and icon
+                                child: const Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(horizontal: 5.0),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      //play text
+                                      Text(
+                                        'Play Now',
+                                        style: TextStyle(
+                                          fontSize: 14.0,
+                                          color: Color(0xFFF7fAFB),
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+
+                                      //play icon
+                                      Icon(
+                                        Icons.play_arrow_rounded,
+                                        size: 20.0,
+                                        color: Colors.white,
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
-                            ],
-                          ),
-                        ],
-                      ),
+                            ),
+                          ],
+                        ),
+
+                        //image
+                        Column(
+                          children: [
+                            Container(
+                              height: 120.0,
+                              width: 120.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20.0),
+                                image: const DecorationImage(
+                                  image: AssetImage("assets/images/sing1.jpg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
                 ),
