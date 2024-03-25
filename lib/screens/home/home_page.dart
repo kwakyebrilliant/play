@@ -176,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
 
-                //Trending musics start here
+                //Trending music start here
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
