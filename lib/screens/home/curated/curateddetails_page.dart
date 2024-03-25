@@ -149,14 +149,14 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                   ),
                 ),
 
-                //Recent search header text
+                // List of songs header text
                 const Padding(
                   padding: EdgeInsets.only(top: 20.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        'Recent',
+                        'Songs',
                         style: TextStyle(
                           fontSize: 20.0,
                           color: Color(0xFFF7fAFB),
@@ -167,7 +167,7 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                   ),
                 ),
 
-                //recent searches 1
+                //song 1
                 Padding(
                   padding: const EdgeInsets.only(top: 20.0),
                   child: Container(
@@ -181,18 +181,22 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                       ),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(15.0),
+                      padding: const EdgeInsets.only(
+                          top: 15.0, bottom: 15.0, right: 15.0),
                       child: Row(
                         children: [
-                          //image
+                          //number
                           Container(
-                            height: 90.0,
-                            width: 90.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20.0),
-                              image: const DecorationImage(
-                                image: AssetImage("assets/images/sing1.jpg"),
-                                fit: BoxFit.cover,
+                            height: 42.0,
+                            width: 42.0,
+                            child: const Center(
+                              child: Text(
+                                '1',
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                           ),
@@ -234,10 +238,10 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                           // Spacer to push the favorite icon to the end
                           const Spacer(),
 
-                          //favorite icon
+                          //play icon
                           Column(
                             children: [
-                              // favorite icon wrapped in a container
+                              // play icon wrapped in a container
                               Container(
                                 height: 28.0,
                                 width: 28.0,
@@ -250,9 +254,9 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                                     color: const Color(0xFFF7fAFB),
                                   ),
                                 ),
-                                // favorite icon
+                                // play icon
                                 child: const Icon(
-                                  Icons.favorite_outlined,
+                                  Icons.play_arrow_rounded,
                                   size: 20.0,
                                   color: Colors.white,
                                 ),
@@ -265,7 +269,7 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                   ),
                 ),
 
-                //recent searches 2
+                //song 2
                 Padding(
                   padding: const EdgeInsets.only(top: 20.0),
                   child: Container(
@@ -279,18 +283,22 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                       ),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(15.0),
+                      padding: const EdgeInsets.only(
+                          top: 15.0, bottom: 15.0, right: 15.0),
                       child: Row(
                         children: [
-                          //image
+                          //number
                           Container(
-                            height: 90.0,
-                            width: 90.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20.0),
-                              image: const DecorationImage(
-                                image: AssetImage("assets/images/sing2.jpg"),
-                                fit: BoxFit.cover,
+                            height: 42.0,
+                            width: 42.0,
+                            child: const Center(
+                              child: Text(
+                                '2',
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                           ),
@@ -305,7 +313,7 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                                 children: [
                                   //song name
                                   Text(
-                                    "This is the way",
+                                    "This is the way of life ",
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
@@ -332,10 +340,10 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                           // Spacer to push the favorite icon to the end
                           const Spacer(),
 
-                          //favorite icon
+                          //play icon
                           Column(
                             children: [
-                              // favorite icon wrapped in a container
+                              // play icon wrapped in a container
                               Container(
                                 height: 28.0,
                                 width: 28.0,
@@ -348,9 +356,9 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                                     color: const Color(0xFFF7fAFB),
                                   ),
                                 ),
-                                // favorite icon
+                                // play icon
                                 child: const Icon(
-                                  Icons.favorite_outlined,
+                                  Icons.play_arrow_rounded,
                                   size: 20.0,
                                   color: Colors.white,
                                 ),
@@ -363,7 +371,7 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                   ),
                 ),
 
-                //recent searches 3
+                //song 3
                 Padding(
                   padding: const EdgeInsets.only(top: 20.0),
                   child: Container(
@@ -377,18 +385,124 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                       ),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(15.0),
+                      padding: const EdgeInsets.only(
+                          top: 15.0, bottom: 15.0, right: 15.0),
                       child: Row(
                         children: [
-                          //image
+                          //number
                           Container(
-                            height: 90.0,
-                            width: 90.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20.0),
-                              image: const DecorationImage(
-                                image: AssetImage("assets/images/sing1.jpg"),
-                                fit: BoxFit.cover,
+                            height: 42.0,
+                            width: 42.0,
+                            child: const Center(
+                              child: Text(
+                                '3',
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ),
+
+                          //song name and artiste name
+                          const Expanded(
+                            flex: 4,
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  //song name
+                                  Text(
+                                    "This is the way here ",
+                                    style: TextStyle(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+
+                                  //name of artiste
+                                  Text(
+                                    "brilliant",
+                                    style: TextStyle(
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+
+                          // Spacer to push the favorite icon to the end
+                          const Spacer(),
+
+                          //play icon
+                          Column(
+                            children: [
+                              // play icon wrapped in a container
+                              Container(
+                                height: 28.0,
+                                width: 28.0,
+                                decoration: BoxDecoration(
+                                  color:
+                                      const Color(0xFFE3E5E5).withOpacity(0.7),
+                                  borderRadius: BorderRadius.circular(60.0),
+                                  border: Border.all(
+                                    width: 1.0,
+                                    color: const Color(0xFFF7fAFB),
+                                  ),
+                                ),
+                                // play icon
+                                child: const Icon(
+                                  Icons.play_arrow_rounded,
+                                  size: 20.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+                //song 4
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFE3E5E5).withOpacity(0.7),
+                      borderRadius: BorderRadius.circular(20.0),
+                      border: Border.all(
+                        width: 1.0,
+                        color: const Color(0xFFF7fAFB),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          top: 15.0, bottom: 15.0, right: 15.0),
+                      child: Row(
+                        children: [
+                          //number
+                          Container(
+                            height: 42.0,
+                            width: 42.0,
+                            child: const Center(
+                              child: Text(
+                                '4',
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                           ),
@@ -430,10 +544,10 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                           // Spacer to push the favorite icon to the end
                           const Spacer(),
 
-                          //favorite icon
+                          //play icon
                           Column(
                             children: [
-                              // favorite icon wrapped in a container
+                              // play icon wrapped in a container
                               Container(
                                 height: 28.0,
                                 width: 28.0,
@@ -446,9 +560,9 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                                     color: const Color(0xFFF7fAFB),
                                   ),
                                 ),
-                                // favorite icon
+                                // play icon
                                 child: const Icon(
-                                  Icons.favorite_outlined,
+                                  Icons.play_arrow_rounded,
                                   size: 20.0,
                                   color: Colors.white,
                                 ),
@@ -461,7 +575,7 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                   ),
                 ),
 
-                //recent searches 4
+                //song 5
                 Padding(
                   padding: const EdgeInsets.only(top: 20.0),
                   child: Container(
@@ -475,18 +589,22 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                       ),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(15.0),
+                      padding: const EdgeInsets.only(
+                          top: 15.0, bottom: 15.0, right: 15.0),
                       child: Row(
                         children: [
-                          //image
+                          //number
                           Container(
-                            height: 90.0,
-                            width: 90.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20.0),
-                              image: const DecorationImage(
-                                image: AssetImage("assets/images/sing2.jpg"),
-                                fit: BoxFit.cover,
+                            height: 42.0,
+                            width: 42.0,
+                            child: const Center(
+                              child: Text(
+                                '5',
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                           ),
@@ -501,7 +619,7 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                                 children: [
                                   //song name
                                   Text(
-                                    "This is the way of life here ",
+                                    "This way of life ",
                                     style: TextStyle(
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
@@ -528,10 +646,10 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                           // Spacer to push the favorite icon to the end
                           const Spacer(),
 
-                          //favorite icon
+                          //play icon
                           Column(
                             children: [
-                              // favorite icon wrapped in a container
+                              // play icon wrapped in a container
                               Container(
                                 height: 28.0,
                                 width: 28.0,
@@ -544,9 +662,9 @@ class _CuratedDetailsPageState extends State<CuratedDetailsPage> {
                                     color: const Color(0xFFF7fAFB),
                                   ),
                                 ),
-                                // favorite icon
+                                // play icon
                                 child: const Icon(
-                                  Icons.favorite_outlined,
+                                  Icons.play_arrow_rounded,
                                   size: 20.0,
                                   color: Colors.white,
                                 ),
