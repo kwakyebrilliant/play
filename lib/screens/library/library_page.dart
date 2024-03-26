@@ -209,7 +209,9 @@ class _LibraryPageState extends State<LibraryPage> {
     ),
 
     //Playlist contents
-    const Center(child: Text('Playlists Content')),
+    const Column(
+      children: [],
+    ),
 
     //Favorites content
     Column(
