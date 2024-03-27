@@ -16,7 +16,7 @@ class _LibraryPageState extends State<LibraryPage> {
 
   // Define tab contents
   final List<Widget> _tabContents = [
-    //Recents content
+    //Recents contents
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
