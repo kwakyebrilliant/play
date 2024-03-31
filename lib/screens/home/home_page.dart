@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> {
 
                             //username here
                             const Text(
-                              '@Kezia',
+                              '@Brilliant',
                               style: TextStyle(
                                 fontSize: 20.0,
                                 color: Color(0xFFF7fAFB),
