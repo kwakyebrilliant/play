@@ -23,8 +23,14 @@ class _SearchPageState extends State<SearchPage> {
     double progress = currentDurationInSeconds / totalDurationInSeconds;
 
     // Converting progress to minutes
-    int currentMinutes = (currentDurationInSeconds / 60).floor();
-    int totalMinutes = (totalDurationInSeconds / 60).floor();
+    int currentMinutes = (currentDurationInSeconds ~/ 60);
+    int currentSeconds = currentDurationInSeconds % 60;
+
+    int totalMinutes = (totalDurationInSeconds ~/ 60);
+    int totalSeconds = totalDurationInSeconds % 60;
+
+    // Format seconds to have double figures
+    String formattedCurrentSeconds = currentSeconds.toString().padLeft(2, '0');
 
     return Scaffold(
       body: Container(
@@ -289,16 +295,65 @@ class _SearchPageState extends State<SearchPage> {
                                           children: [
                                             //current minutes
                                             Text(
-                                              '$currentMinutes',
+                                              '$currentMinutes:$formattedCurrentSeconds',
                                               style: const TextStyle(
                                                   fontSize: 14.0),
                                             ),
 
                                             //total minutes
                                             Text(
-                                              ' $totalMinutes',
+                                              ' $totalMinutes:${totalSeconds.toString().padLeft(2, '0')}',
                                               style: const TextStyle(
                                                   fontSize: 14.0),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+
+                                      //padding wrapping shuffle, arrow left, play, arrow right, loop
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 40.0, vertical: 60.0),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            //arrow left icon here
+                                            Icon(
+                                              Icons.arrow_left_rounded,
+                                              size: 60.0,
+                                              color: const Color(0xFF667b80)
+                                                  .withOpacity(0.7),
+                                            ),
+
+                                            //play icon container
+                                            Container(
+                                              height: 58.0,
+                                              width: 58.0,
+                                              decoration: BoxDecoration(
+                                                color: const Color(0xFF667b80),
+                                                borderRadius:
+                                                    BorderRadius.circular(60.0),
+                                                border: Border.all(
+                                                  width: 1.0,
+                                                  color:
+                                                      const Color(0xFFF7fAFB),
+                                                ),
+                                              ),
+                                              // Play icon
+                                              child: const Icon(
+                                                Icons.play_arrow_rounded,
+                                                size: 30.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+
+                                            //arrow right icon here
+                                            Icon(
+                                              Icons.arrow_right_rounded,
+                                              size: 60.0,
+                                              color: const Color(0xFF667b80)
+                                                  .withOpacity(0.7),
                                             ),
                                           ],
                                         ),
