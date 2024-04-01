@@ -318,9 +318,17 @@ class _SearchPageState extends State<SearchPage> {
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
                                           children: [
+                                            //shuffle icon here
+                                            Icon(
+                                              Icons.shuffle_outlined,
+                                              size: 28.0,
+                                              color: const Color(0xFF667b80)
+                                                  .withOpacity(0.7),
+                                            ),
+
                                             //arrow left icon here
                                             Icon(
-                                              Icons.arrow_left_rounded,
+                                              Icons.arrow_left_outlined,
                                               size: 60.0,
                                               color: const Color(0xFF667b80)
                                                   .withOpacity(0.7),
@@ -350,8 +358,16 @@ class _SearchPageState extends State<SearchPage> {
 
                                             //arrow right icon here
                                             Icon(
-                                              Icons.arrow_right_rounded,
+                                              Icons.arrow_right_outlined,
                                               size: 60.0,
+                                              color: const Color(0xFF667b80)
+                                                  .withOpacity(0.7),
+                                            ),
+
+                                            //loop icon here
+                                            Icon(
+                                              Icons.loop_outlined,
+                                              size: 28.0,
                                               color: const Color(0xFF667b80)
                                                   .withOpacity(0.7),
                                             ),
