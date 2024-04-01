@@ -11,8 +11,21 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
   final PageController _pageController = PageController(viewportFraction: 0.8);
 
+  // Simulating the duration of the song in seconds
+  final int totalDurationInSeconds = 300;
+
+  // Simulating the current progress of the song in seconds
+  final int currentDurationInSeconds = 120;
+
   @override
   Widget build(BuildContext context) {
+    // Calculating progress percentage
+    double progress = currentDurationInSeconds / totalDurationInSeconds;
+
+    // Converting progress to minutes
+    int currentMinutes = (currentDurationInSeconds / 60).floor();
+    int totalMinutes = (totalDurationInSeconds / 60).floor();
+
     return Scaffold(
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -179,15 +192,122 @@ class _SearchPageState extends State<SearchPage> {
                   onTap: () {
                     showModalBottomSheet(
                       context: context,
+                      isScrollControlled: true,
                       builder: (BuildContext context) {
-                        return Container(
-                          //bottom sheet content here
-                          child: Column(
-                            children: [
-                              Center(
-                                child: Text('Details will be shown here'),
-                              ),
-                            ],
+                        return FractionallySizedBox(
+                          heightFactor: 0.93,
+                          child: Container(
+                            // Bottom sheet content here
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                // Arrow drop down icon centered
+                                const Center(
+                                  child: Icon(
+                                    // Arrow drop down icon here
+                                    Icons.arrow_drop_down,
+                                    size: 34.0,
+                                  ),
+                                ),
+
+                                // Padding wrapping the image
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 30.0,
+                                    vertical: 20.0,
+                                  ),
+                                  child: Container(
+                                    height: 250.0,
+                                    width: MediaQuery.of(context).size.width,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20.0),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 5,
+                                          blurRadius: 7,
+                                          offset: const Offset(0, 3),
+                                        ),
+                                      ],
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(20.0),
+                                      child: Image.asset(
+                                        "assets/images/sing1.jpg",
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 40.0),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      // Song name
+                                      const Text(
+                                        "This is the way of life here",
+                                        style: TextStyle(
+                                          fontSize: 24.0,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+
+                                      // Name of artist
+                                      const Text(
+                                        "by brilliant",
+                                        style: TextStyle(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w300,
+                                        ),
+                                      ),
+
+                                      //linear progress bar here
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            right: 40.0, left: 40.0, top: 60.0),
+                                        child: LinearProgressIndicator(
+                                          backgroundColor: Colors.grey[300],
+                                          valueColor:
+                                              const AlwaysStoppedAnimation<
+                                                  Color>(
+                                            Color(0xFF667b80),
+                                          ),
+                                          value: progress,
+                                        ),
+                                      ),
+
+                                      //padding wrapping curent minutes and total minutes
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 40.0),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            //current minutes
+                                            Text(
+                                              '$currentMinutes',
+                                              style: const TextStyle(
+                                                  fontSize: 14.0),
+                                            ),
+
+                                            //total minutes
+                                            Text(
+                                              ' $totalMinutes',
+                                              style: const TextStyle(
+                                                  fontSize: 14.0),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         );
                       },
@@ -209,7 +329,7 @@ class _SearchPageState extends State<SearchPage> {
                         padding: const EdgeInsets.all(15.0),
                         child: Row(
                           children: [
-                            //image
+                            // Image
                             Container(
                               height: 90.0,
                               width: 90.0,
@@ -222,7 +342,7 @@ class _SearchPageState extends State<SearchPage> {
                               ),
                             ),
 
-                            //song name and artiste name
+                            // Song name and artist name
                             const Expanded(
                               flex: 4,
                               child: Padding(
@@ -230,7 +350,7 @@ class _SearchPageState extends State<SearchPage> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    //song name
+                                    // Song name
                                     Text(
                                       "This is the way of life here ",
                                       style: TextStyle(
@@ -241,7 +361,7 @@ class _SearchPageState extends State<SearchPage> {
                                       ),
                                     ),
 
-                                    //name of artiste
+                                    // Name of artist
                                     Text(
                                       "brilliant",
                                       style: TextStyle(
@@ -259,10 +379,10 @@ class _SearchPageState extends State<SearchPage> {
                             // Spacer to push the favorite icon to the end
                             const Spacer(),
 
-                            //favorite icon
+                            // Favorite icon
                             Column(
                               children: [
-                                // favorite icon wrapped in a container
+                                // Favorite icon wrapped in a container
                                 Container(
                                   height: 28.0,
                                   width: 28.0,
@@ -275,7 +395,7 @@ class _SearchPageState extends State<SearchPage> {
                                       color: const Color(0xFFF7fAFB),
                                     ),
                                   ),
-                                  // favorite icon
+                                  // Favorite icon
                                   child: const Icon(
                                     Icons.favorite_outlined,
                                     size: 20.0,
