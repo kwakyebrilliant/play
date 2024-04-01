@@ -374,6 +374,106 @@ class _SearchPageState extends State<SearchPage> {
                                           ],
                                         ),
                                       ),
+
+                                      Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 40.0),
+                                        child: Container(
+                                          height: 50.0,
+                                          width:
+                                              MediaQuery.of(context).size.width,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFF667b80),
+                                            borderRadius:
+                                                BorderRadius.circular(60.0),
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                horizontal: 20.0),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                //info icon here
+                                                Container(
+                                                  height: 28.0,
+                                                  width: 28.0,
+                                                  decoration: BoxDecoration(
+                                                    color:
+                                                        const Color(0xFFE3E5E5)
+                                                            .withOpacity(0.7),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            60.0),
+                                                    border: Border.all(
+                                                      width: 1.0,
+                                                      color: const Color(
+                                                          0xFFF7fAFB),
+                                                    ),
+                                                  ),
+                                                  // info icon
+                                                  child: const Icon(
+                                                    Icons.info_rounded,
+                                                    size: 20.0,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+
+                                                //favorite icon here
+                                                Container(
+                                                  height: 28.0,
+                                                  width: 28.0,
+                                                  decoration: BoxDecoration(
+                                                    color:
+                                                        const Color(0xFFE3E5E5)
+                                                            .withOpacity(0.7),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            60.0),
+                                                    border: Border.all(
+                                                      width: 1.0,
+                                                      color: const Color(
+                                                          0xFFF7fAFB),
+                                                    ),
+                                                  ),
+                                                  // favorite icon
+                                                  child: const Icon(
+                                                    Icons.favorite_outline,
+                                                    size: 20.0,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+
+                                                //add icon here
+                                                Container(
+                                                  height: 28.0,
+                                                  width: 28.0,
+                                                  decoration: BoxDecoration(
+                                                    color:
+                                                        const Color(0xFFE3E5E5)
+                                                            .withOpacity(0.7),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            60.0),
+                                                    border: Border.all(
+                                                      width: 1.0,
+                                                      color: const Color(
+                                                          0xFFF7fAFB),
+                                                    ),
+                                                  ),
+                                                  // add icon
+                                                  child: const Icon(
+                                                    Icons.add_rounded,
+                                                    size: 20.0,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
