@@ -375,6 +375,7 @@ class _SearchPageState extends State<SearchPage> {
                                         ),
                                       ),
 
+                                      //padding wrapping
                                       Padding(
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 40.0),
