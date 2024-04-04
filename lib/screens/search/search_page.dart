@@ -375,7 +375,7 @@ class _SearchPageState extends State<SearchPage> {
                                         ),
                                       ),
 
-                                      //padding wrapping
+                                      //padding wrapping container containing info, favorite and add icon
                                       Padding(
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 40.0),
